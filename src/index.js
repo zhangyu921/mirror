@@ -1,3 +1,4 @@
+// 引用各个模块
 import { Route, Redirect, Switch, Prompt, withRouter } from 'react-router'
 import { Link, NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
@@ -8,6 +9,7 @@ import hook from './hook'
 import Router from './router'
 import defaults from './defaults'
 
+// 暴露接口
 export default {
   model,
   actions,
