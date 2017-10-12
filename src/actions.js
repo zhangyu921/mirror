@@ -25,6 +25,7 @@ export function addActions(modelName, reducers = {}, effects = {}) {
     options.addEffect(`${modelName}${SEP}${effectName}`, effects[effectName])
 
     // Effect is like normal action, except it is handled by mirror middleware
+    // Effect 像普通的action一样，区别是它会被Mirror的Middleware接收，即createMiddleware方法
     actions[modelName][effectName] = actionCreator(modelName, effectName)
     // Allow packages to differentiate effects from actions
     actions[modelName][effectName].isEffect = true
