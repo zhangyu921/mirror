@@ -6,7 +6,7 @@ const SEP = '/'
 export const actions = {}
 
 export function addActions(modelName, reducers = {}, effects = {}) {
-
+  // 防止出现 undefined
   if (Object.keys(reducers).length || Object.keys(effects).length) {
     actions[modelName] = actions[modelName] || {}
   }
@@ -37,7 +37,7 @@ export function resolveReducers(modelName, reducers = {}) {
     return acc
   }, {})
 }
-
+// 简单封装了遍历对象方法
 function each(obj, callback) {
   Object.keys(obj).forEach(callback)
 }

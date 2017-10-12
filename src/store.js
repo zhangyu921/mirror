@@ -45,6 +45,7 @@ export function replaceReducer(store, models, reducers) {
   store.replaceReducer(reducer)
 }
 
+// 取出modes里的reduces和自定义的reducers，通过combineReducers重新组合
 function createReducer(models, reducers) {
 
   const modelReducers = models.reduce((acc, cur) => {

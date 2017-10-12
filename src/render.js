@@ -6,6 +6,7 @@ import { options } from './defaults'
 import { models } from './model'
 import { store, createStore, replaceReducer } from './store'
 
+// 是否已经render过的标志位
 let started = false
 let Root
 
