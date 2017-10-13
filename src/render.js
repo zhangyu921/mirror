@@ -17,6 +17,7 @@ export default function render(component, container, callback) {
   if (started) {
 
     // If app has rendered, do `store.replaceReducer` to update store.
+    // 如果已经执行过render，就执行replaceReducer方法
     replaceReducer(store, models, reducers)
 
     // Call `render` without arguments means *re-render*. Since store has updated,
@@ -37,7 +38,7 @@ export default function render(component, container, callback) {
       </Provider>
     )
   }
-
+  // 更新标志位
   started = true
 
   global.document && ReactDOM.render(<Root/>, container, callback)

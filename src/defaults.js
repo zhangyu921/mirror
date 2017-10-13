@@ -58,7 +58,7 @@ export default function defaults(opts = {}) {
       opts.addEffect = opts.addEffect(effects)
     }
   }
-
+  // 写入options
   Object.keys(opts).forEach(key => {
     options[key] = opts[key]
   })
